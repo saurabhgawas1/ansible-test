@@ -1,0 +1,18 @@
+---
+- name: List ACE Broker
+  hosts: ZADRNBRAPP0038
+  gather_facts: false
+  vars:
+    ace_installation_dir: "/apps/wmb/mqsi/ace-11.0.0.17/server"
+    broker_name: "MyBroker"
+    broker_port: 7800
+    sudo_user: mqbrkrs
+
+  tasks:
+
+  - name: Display broker status
+    command: "{{ ace_installation_dir }}/bin/mqsilist"
+    become: yes
+    become_method: su
+    become_user: mqbrkrs
+    changed_when: false
