@@ -1,11 +1,11 @@
 ---
 - name: List ACE Broker
-  hosts: ZADRNBRAPP0038
+  hosts: ZAURNBRAPP002F
   gather_facts: false
   vars:
     ace_installation_dir: "/apps/wmb/mqsi/ace-11.0.0.17/server"
-    broker_name: "MyBroker"
-    broker_port: 7800
+    broker_name: "MBSIT01"
+    broker_port: 4415
     sudo_user: mqbrkrs
 
   tasks:
